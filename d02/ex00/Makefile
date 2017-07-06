@@ -6,11 +6,11 @@
 #    By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 18:36:51 by vtenigin          #+#    #+#              #
-#    Updated: 2017/07/05 19:08:47 by vtenigin         ###   ########.fr        #
+#    Updated: 2017/07/05 19:17:00 by vtenigin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = human
+NAME = fixed
 
 FLAGS = -Wall -Wextra -Werror
 
