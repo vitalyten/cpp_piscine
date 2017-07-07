@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 23:17:03 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/06 23:19:56 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/06 23:18:58 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class FragTrap : public ClapTrap {
 public:
-	ScavTrap(void);
-	ScavTrap(std::string const & name);
-	ScavTrap(ScavTrap const & that);
-	~ScavTrap(void);
+	FragTrap(void);
+	FragTrap(std::string const & name);
+	FragTrap(FragTrap const & that);
+	~FragTrap(void);
 
-	ScavTrap & operator=(ScavTrap const & rhs);
+	FragTrap & operator=(FragTrap const & rhs);
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-	void challengeNewcomer(std::string const & target);
+	void vaulthunter_dot_exe(std::string const & target);
 
 private:
 	static unsigned int const	_max_hit_points = 100;
-	static unsigned int const	_max_energy_points = 50;
+	static unsigned int const	_max_energy_points = 100;
 	static unsigned int const	_level = 1;
-	static unsigned int const	_melee_attack_damage = 20;
-	static unsigned int const	_ranged_attack_damage = 15;
-	static unsigned int const	_armor_damage_reduction = 3;
+	static unsigned int const	_melee_attack_damage = 30;
+	static unsigned int const	_ranged_attack_damage = 20;
+	static unsigned int const	_armor_damage_reduction = 5;
 };
 
 #endif

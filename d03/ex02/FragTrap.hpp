@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 23:17:03 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/06 20:06:16 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/06 23:19:09 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ public:
 	~FragTrap(void);
 
 	FragTrap & operator=(FragTrap const & rhs);
+	void rangedAttack(std::string const & target);
+	void meleeAttack(std::string const & target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 
 	void vaulthunter_dot_exe(std::string const & target);
 

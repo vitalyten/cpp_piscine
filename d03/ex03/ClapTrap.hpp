@@ -1,41 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 23:17:03 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/06 23:19:56 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/06 22:30:11 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
-# include "ClapTrap.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <iostream>
+# include <sstream>
+# include <iomanip>
 
-class ScavTrap : public ClapTrap {
+class ClapTrap {
 public:
-	ScavTrap(void);
-	ScavTrap(std::string const & name);
-	ScavTrap(ScavTrap const & that);
-	~ScavTrap(void);
+	ClapTrap(void);
+	ClapTrap(std::string const & name);
+	ClapTrap(ClapTrap const & that);
+	~ClapTrap(void);
 
-	ScavTrap & operator=(ScavTrap const & rhs);
+	ClapTrap & operator=(ClapTrap const & rhs);
+
+	std::string makeId(unsigned int const id);
+	std::string getName(void) const;
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-	void challengeNewcomer(std::string const & target);
-
-private:
-	static unsigned int const	_max_hit_points = 100;
+protected:
+	std::string					_name;
+	unsigned int const			_id;
+	unsigned int				_hit_points;
+	unsigned int				_energy_points;
+	static unsigned int			_count;
+	static unsigned int const	_max_hit_points = 50;
 	static unsigned int const	_max_energy_points = 50;
 	static unsigned int const	_level = 1;
-	static unsigned int const	_melee_attack_damage = 20;
-	static unsigned int const	_ranged_attack_damage = 15;
-	static unsigned int const	_armor_damage_reduction = 3;
+	static unsigned int const	_melee_attack_damage = 50;
+	static unsigned int const	_ranged_attack_damage = 50;
+	static unsigned int const	_armor_damage_reduction = 10;
 };
 
 #endif
