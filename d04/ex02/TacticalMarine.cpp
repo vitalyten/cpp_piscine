@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 23:39:18 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/07 23:57:16 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/08 14:29:53 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ TacticalMarine * TacticalMarine::clone(void) const {
 }
 
 TacticalMarine & TacticalMarine::operator=(TacticalMarine const & that) {
-	void(that);
+	(void)that;
 	return *this;
 }
 

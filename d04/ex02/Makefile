@@ -6,16 +6,15 @@
 #    By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 18:36:51 by vtenigin          #+#    #+#              #
-#    Updated: 2017/07/07 22:29:36 by vtenigin         ###   ########.fr        #
+#    Updated: 2017/07/08 14:28:42 by vtenigin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = game
+NAME = squad
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = AWeapon.cpp Enemy.cpp PowerFist.cpp SuperMutant.cpp Character.cpp \
-	PlasmaRifle.cpp RadScorpion.cpp main.cpp
+SRC = AssaultTerminator.cpp Squad.cpp TacticalMarine.cpp main.cpp
 
 all: $(NAME)
 
