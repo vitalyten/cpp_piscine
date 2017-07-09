@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/08 14:43:25 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/08 16:13:44 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/08 18:25:38 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ MateriaSource::~MateriaSource(void) {
 	}
 }
 
-MateriaSource & MateriaSource::operator=(MateriaSource & const that) {
+MateriaSource & MateriaSource::operator=(MateriaSource const & that) {
 	for (int i = 0; i < this->_count; ++i) {
 		delete this->_source[i];
 	}
 	for (int i = 0; i < that._count; ++i) {
-		this->_source[i] = that._source[i].clone();
+		this->_source[i] = that._source[i]->clone();
 	}
 	return *this;
 }

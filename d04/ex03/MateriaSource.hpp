@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/08 14:43:23 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/08 16:08:04 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/08 18:16:51 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ public:
 	MateriaSource(MateriaSource const & that);
 	~MateriaSource(void);
 
-	MateriaSource & operator=(MateriaSource & const that);
+	MateriaSource & operator=(MateriaSource const & that);
 	void learnMateria(AMateria*);
 	AMateria* createMateria(std::string const & type);
 private:
