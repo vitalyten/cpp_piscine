@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/08 19:53:09 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/08 23:38:49 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/09 23:04:14 by ofedorov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,35 @@
 # define SPACE 32
 # include <iostream>
 # include <ncurses.h>
+# include <time.h>
 # include "Entity.hpp"
+# include "Map.hpp"
 
 class Game {
 public:
-	Game(void);
-	Game(Game const &);
 	~Game(void);
+	Game(void);
 
 	Game& operator=(Game const &);
-	void addEntity(Entity*);
-	void resize(void);
+	// void addEntity(Entity*);
+	// void resize(void);
 	void start(void);
 	void end(void);
-	bool draw(void);
-// private:
+	bool drawHeader(void);
+	bool getInput(void);
+
+	int	getHeight() const;
+	int	getWidth() const;
+
+private:
+	Game(Game const &);
+
 	int _height;
 	int _width;
-	int _count;
-	int _size;
-	Entity** _entities;
+	// int _frames;
+	time_t _start_time;
+	// clock_t _time;
+	Map *_map;
 };
 
 #endif

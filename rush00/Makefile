@@ -6,7 +6,7 @@
 #    By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 18:36:51 by vtenigin          #+#    #+#              #
-#    Updated: 2017/07/08 21:13:24 by vtenigin         ###   ########.fr        #
+#    Updated: 2017/07/09 23:31:26 by vtenigin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,12 @@ NAME = ft_retro
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = Entity.cpp Game.cpp main.cpp
+SRC = Map.cpp Entity.cpp Game.cpp main.cpp
 
 all: $(NAME)
 
 $(NAME):
 	clang++ $(FLAGS) -o $(NAME) $(SRC) -lncurses
-
 fclean:
 	rm -f $(NAME)
 
