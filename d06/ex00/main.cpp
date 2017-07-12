@@ -6,11 +6,12 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 23:17:12 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/11 21:21:16 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/11 21:46:15 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "Converter.hpp"
 
 int main(int ac, char** av) {
@@ -45,9 +46,7 @@ int main(int ac, char** av) {
 	std::cout << "float: ";
 	try {
 		float f = converter;
-		std::cout << f;
-		if (f == static_cast<int>(f)) std::cout << ".0";
-		std::cout << "f" << std::endl;
+		std::cout << std::fixed << std::setprecision(1) << f << "f" << std::endl;
 	} catch(std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
@@ -55,9 +54,7 @@ int main(int ac, char** av) {
 	std::cout << "double: ";
 	try {
 		double d = converter;
-		std::cout << d;
-		if (d == static_cast<int>(d)) std::cout << ".0";
-		std::cout << std::endl;
+		std::cout << std::fixed << std::setprecision(1) << d << std::endl;
 	} catch(std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
