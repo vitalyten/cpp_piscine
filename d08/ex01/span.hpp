@@ -6,7 +6,7 @@
 /*   By: vtenigin <vtenigin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 16:47:24 by vtenigin          #+#    #+#             */
-/*   Updated: 2017/07/13 19:38:21 by vtenigin         ###   ########.fr       */
+/*   Updated: 2017/07/14 21:08:49 by vtenigin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ public:
 	int shortestSpan(void);
 	int longestSpan(void);
 	unsigned int length(void);
-	void sort(void);
 
 	struct NoSpanException : std::exception {
 		const char* what(void) const throw();
@@ -48,6 +47,7 @@ private:
 	bool _sorted;
 	std::vector<int>* _vector;
 
+	void sort(void);
 	Span(void);
 };
 
